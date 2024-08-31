@@ -6,10 +6,8 @@ public class Desafio {
         //Desafio 1
         Scanner leitura = new Scanner(System.in);
 
-        int numero = 0;
-
         System.out.println("Digite um numero: ");
-        numero = leitura.nextInt();
+        int numero = leitura.nextInt();
 
         if (numero > 0){
             System.out.println("Numero positivo");
