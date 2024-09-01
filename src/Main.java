@@ -29,26 +29,27 @@ public class Main {
 
             switch (option) {
                 case 1:
-                    System.out.println("Seu saldo é R$: " + saldo);
+                    System.out.println("Seu saldo é R$: " + saldo + "\n");
                     break;
                 case 2:
-                    System.out.print("Informe o valor a receber: ");
+                    System.out.print("Informe o valor a receber: \n");
                     saldo += leitura.nextDouble();
-                    System.out.println("Saldo atualizado R$: " + saldo);
+                    System.out.println("Saldo atualizado R$: " + saldo + "\n");
                     break;
                 case 3:
-                    System.out.print("Informe o valor da transferência: ");
-                    saldo -= leitura.nextDouble();
-                    System.out.println("Saldo atualizado R$: " + saldo);
-                    break;
+                    System.out.print("Informe o valor da transferência: \n");
+                    double tranferencia = leitura.nextDouble();
+                    if (tranferencia <= saldo){
+                        System.out.println("Saldo atualizado R$: " + (saldo - tranferencia));
+                    }else {
+                        System.out.println("Não há saldo suficiente para fazer essa transferência.\n");
+                    }break;
                 case 4:
-                    System.out.println("Sessão Encerrada!");
+                    System.out.println("Sessão Encerrada!\n");
                     break;
                 default:
-                    System.out.println("Opção inválida. Tente novamente.");
+                    System.out.println("Opção inválida. Tente novamente.\n");
             }
-
-
 
 
         } while (option != 4);
